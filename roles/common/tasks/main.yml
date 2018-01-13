@@ -1,0 +1,19 @@
+---
+- name: Seting hostname
+  hostname: name=azurit
+
+- name: Běžný soft pro zpříjemnění práce na serveru
+  apt: pkg={{ item }}
+  with_items:
+    - sudo
+    - vim
+    - htop
+    - curl
+    - zsh
+    - git
+    - whois
+    - pwgen
+    - dirmngr
+    - tmux
+    - aptitude
+

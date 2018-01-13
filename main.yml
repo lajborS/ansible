@@ -1,0 +1,9 @@
+---
+- name: Main playbook
+  hosts: all
+  user: root
+  become: yes
+
+  roles:
+    - common
+    - webserver
