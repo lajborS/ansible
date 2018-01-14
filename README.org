@@ -22,3 +22,9 @@ Since Ansible requires running under the router, you need to upload the private 
 #+BEGIN_SRC 
 cat ~/.ssh/id_rsa.pub | ssh sub.example.com "mkdir -p /root/.ssh && cat >> /root/.ssh/authorized_keys" 
 #+END_SRC
+
+Now clone repo with ansible, switch to directory *ansible* and let's play:
+
+#+BEGIN_SRC
+ansible-playbook main.yml
+#+END_SRC
