@@ -1,0 +1,18 @@
+* Ansible
+
+Hi everyone,
+
+this is simple ansible-playbook for install and configuration basic settings webservers
+
+** Using:
+
+First you must to state ours servers in **/etc/ansible/hosts** on your local computer 
+For example:
+
+#+BEGIN_SRC 
+[webservers]
+sub.example.com
+10.13.56.10
+#+END_SRC
+
+It is possible to use FQDN or IP adress remote server

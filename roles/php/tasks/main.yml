@@ -1,0 +1,7 @@
+---
+- include: repo.yml
+
+- name: Install php version 7.1
+  apt: pkg={{ item }}
+  with_items:
+    - php7.1

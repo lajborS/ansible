@@ -9,3 +9,5 @@
     - dns
     - proxy
     - webserver
+    - php
+    - db-maria

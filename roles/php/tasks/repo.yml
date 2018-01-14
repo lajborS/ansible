@@ -1,0 +1,6 @@
+---
+- name: Set key sury.org
+  apt_key: keyserver=keyserver.ubuntu.com id=DF3D585DB8F0EB658690A554AC0E47584A7A714D keyring=/etc/apt/trusted.gpg.d/ansible-sury.org.gpg
+
+- name: Add repo from ondrej sury
+  apt_repository: repo="deb https://packages.sury.org/php/ jessie main" filename="sury.org"
