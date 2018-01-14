@@ -1,0 +1,5 @@
+---
+- name: Instal HAproxy
+  apt: name=haproxy state=present
+  notify:
+    - restart haproxy

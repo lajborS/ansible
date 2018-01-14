@@ -1,8 +1,11 @@
 ---
-- name: Seting hostname
-  hostname: name=azurit
+- name: set timezone Europe/Prague
+  timezone: name=Europe/Prague
 
-- name: Běžný soft pro zpříjemnění práce na serveru
+- name: set locales
+  locale_gen: name=cs_CZ.UTF-8 state=present
+
+- name: Basic programs
   apt: pkg={{ item }}
   with_items:
     - sudo
@@ -16,4 +19,9 @@
     - dirmngr
     - tmux
     - aptitude
+    - gpgv2
+    - telnet
+
+- name: Adduser lajbor
+  user: name=lajbor groups=sudo password="{{ lookup('password', '~/.ansible/credentials/' + ansible_host + '/user length=8') }}"
 

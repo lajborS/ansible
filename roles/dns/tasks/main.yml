@@ -1,0 +1,15 @@
+---
+- name: Install DNS server BIND9
+  apt: pkg={{ item }} state=present
+  with_items:
+    - bind9
+    - bind9-doc
+    - bind9utils
+  notify:
+    - restart bind service
+
+- name: Create dir zones
+  file: path=/etc/bind/zones state=directory
+
+- name: Create dir reverse
+  file: path=/etc/bind/reverse state=directory
