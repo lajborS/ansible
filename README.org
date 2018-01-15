@@ -2,7 +2,9 @@
 
 Hi everyone,
 
-this is simple ansible-playbook for install and configuration basic settings webserver with HAproxy, PHP, NGINX and MariaDB
+this is simple ansible-playbook for install and configuration basic settings webserver with HAproxy, PHP, NGINX and MariaDB.
+
+Testing on Debian 8 Jessie.
 
 ** Using:
 
@@ -17,7 +19,7 @@ sub.example.com
 
 It is possible to use FQDN or IP adress remote server.
 
-Since Ansible requires running under the router, you need to upload the private ssh key to the root server into the authorized_keys file:
+Since Ansible requires running under the root user, you need to upload the private ssh key to the root server into the authorized_keys file:
 
 #+BEGIN_SRC 
 cat ~/.ssh/id_rsa.pub | ssh sub.example.com "mkdir -p /root/.ssh && cat >> /root/.ssh/authorized_keys" 
